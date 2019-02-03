@@ -1,0 +1,51 @@
+---
+.gitlab-ci.yml:
+  bundler_args: |
+    --without system_tests --path vendor/bundle
+
+    cache:
+      key: "$CI_JOB_STAGE-$CI_COMMIT_REF_NAME"
+      paths:
+        - vendor/bundle
+
+.travis.yml:
+  bundler_args: --without system_tests
+  includes:
+    - env: PUPPET_GEM_VERSION="~> 5.0" CHECK=build DEPLOY_TO_FORGE=yes
+  branches:
+    - /^\d/
+  deploy: true
+  user: kobybr
+  secure: "n5Z0l5Uo8ljOHtghMCAi2sg0WeKyHpdto7RtIEm68pUK1AG2Z+F5pDxinsC5yDD8J33GhnCkg9riAcq41eNhMkCADDFRAWhe9GRtG+3EhYUnlnMlpYo9Z5FqpJuLblZc42x1HtXWskb+C0gxvZEe07AaosA1wq5ZCBGSs6DlaKwKBj2MWxVdgyFRilPhd82tYby3sL75MqW9ONQsENs9YwS7NfXTZiLhBojbiAj967evQCQyW8kXySTSv4t1ybKdViCUuPbm8wcJ5lelHk0jHt541fODUqxj+UlrwZwvdOuiMdUHOTKSfuf/LLngEXI497DCLskKVSKCjAoMO0eEyxko7Jrs39AlTReughx7BprWeHQeMTAaZxME2KqsT09l9bvvYlzU1pFGRxZAxm/AkMFA4S+GROWN4ZdllHUaW//u3G1rdEyr+rF7z8Uc5yY76gbVYgHOBZGc8nyfWxu3TFnj30WQvCj2zEtjO+GAFJ33V/QeA5tQhu7jsaYDoCnZWNfYSkH7cOBH3pMIY736D6g8TY2lQ6h3sIq4qafBc8NlyyX2Rt5E9gj5pk/jhxCaX4vn+FWPJ81k43WRG4nZ5lwWvJuQ0lsIIMhGaWHkGZtSzAZ3z+z08g4uyCbTUlJ6OWAVVEs+VdX6FhlSKEwPecszK4A8txN+sOo7HL47iI8="
+
+Gemfile:
+  required:
+    ':development':
+      - gem: travis
+      - gem: puppet-blacksmith
+    ':puppet_lint':
+      - gem: puppet-lint-absolute_classname-check
+      - gem: puppet-lint-absolute_template_path
+      - gem: puppet-lint-alias-check
+      - gem: puppet-lint-classes_and_types_beginning_with_digits-check
+      - gem: puppet-lint-duplicate_class_parameters-check
+      - gem: puppet-lint-empty_string-check
+      - gem: puppet-lint-extended
+      - gem: puppet-lint-file_ensure-check
+      - gem: puppet-lint-file_source_rights-check
+      - gem: puppet-lint-leading_zero-check
+      - gem: puppet-lint-numericvariable
+      - gem: puppet-lint-resource_reference_syntax
+      - gem: puppet-lint-security-plugins
+      - gem: puppet-lint-spaceship_operator_without_tag-check
+      - gem: puppet-lint-strict_indent-check
+      - gem: puppet-lint-trailing_comma-check
+      - gem: puppet-lint-trailing_newline-check
+      - gem: puppet-lint-undef_in_function-check
+      - gem: puppet-lint-unquoted_string-check
+      - gem: puppet-lint-variable_contains_upcase
+      - gem: puppet-lint-version_comparison-check
+
+Rakefile:
+  requires:
+    - puppet_blacksmith/rake_tasks

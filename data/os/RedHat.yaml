@@ -1,0 +1,2 @@
+---
+apmserver::package_config_path: /etc/apm-server
