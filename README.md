@@ -1,10 +1,10 @@
 Elastic APM server
 ==================
 
-[![Build Status](https://travis-ci.org/kobybr/puppet-apmserver.svg)](https://travis-ci.org/kobybr/puppet-apmserver)
-[![Puppet Forge](https://img.shields.io/puppetforge/v/kobybr/puppet-apmserver.svg)](https://forge.puppetlabs.com/kobybr/puppet-apmserver)
-[![Puppet Forge Downloads](https://img.shields.io/puppetforge/dt/kobybr/puppet-apmserver.svg)](https://forge.puppetlabs.com/kobybr/puppet-apmserver)
-[![Puppet Forge Score](https://img.shields.io/puppetforge/f/kobybr/puppet-apmserver.svg)](https://forge.puppetlabs.com/kobybr/puppet-apmserver/scores)
+[![Build Status](https://travis-ci.com/kobybr/puppet-apmserver.svg)](https://travis-ci.com/kobybr/puppet-apmserver)
+[![Puppet Forge](https://img.shields.io/puppetforge/v/kobybr/apmserver.svg)](https://forge.puppetlabs.com/kobybr/apmserver)
+[![Puppet Forge Downloads](https://img.shields.io/puppetforge/dt/kobybr/apmserver.svg)](https://forge.puppetlabs.com/kobybr/apmserver)
+[![Puppet Forge Score](https://img.shields.io/puppetforge/f/kobybr/apmserver.svg)](https://forge.puppet.com/kobybr/apmserver)
 
 Usage
 -----
