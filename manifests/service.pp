@@ -4,6 +4,7 @@
 #
 # @example
 #   include apmserver::service
+#
 class apmserver::service (
   String $service_ensure = $apmserver::service_ensure,
   String $service_enable = $apmserver::service_enable,

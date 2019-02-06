@@ -4,7 +4,6 @@ apmserver::merge_default_config: true
 apmserver::package_version: 6.5.4-1
 apmserver::package_ensure: present
 apmserver::package_name: apm-server
-#apmserver::package_config_path: /etc/apm-server
 apmserver::service_ensure: running
 apmserver::service_enable: 'true'
 apmserver::service_name: apm-server

@@ -4,7 +4,9 @@ Elastic APM server
 [![Build Status](https://travis-ci.com/kobybr/puppet-apmserver.svg)](https://travis-ci.com/kobybr/puppet-apmserver)
 [![Puppet Forge](https://img.shields.io/puppetforge/v/kobybr/apmserver.svg)](https://forge.puppetlabs.com/kobybr/apmserver)
 [![Puppet Forge Downloads](https://img.shields.io/puppetforge/dt/kobybr/apmserver.svg)](https://forge.puppetlabs.com/kobybr/apmserver)
-[![Puppet Forge Score](https://img.shields.io/puppetforge/f/kobybr/apmserver.svg)](https://forge.puppet.com/kobybr/apmserver)
+[![Puppet Forge Score](https://img.shields.io/puppetforge/f/kobybr/apmserver.svg?style=flat)](https://forge.puppet.com/kobybr/apmserver/scores)
+![Puppet Forge Endorsement](https://img.shields.io/puppetforge/e/kobybr/apmserver.svg?style=flat)
+![GitHub last commit](https://img.shields.io/github/last-commit/kobybr/puppet-apmserver.svg?style=flat)
 
 Usage
 -----
@@ -50,22 +52,32 @@ class {'::apmserver':
 Module Parameters
 -----------------
 
-###`manage_repo`
+`manage_repo`
+Enable repo management by enabling official Elastic repositories.
 
-###`merge_default_config`
+`merge_default_config`
+Merge config settings from the *apm-server.yml* file provided in the rpm.  Default: *true*
 
-###`package_ensure`
+`package_ensure`
+Control if the managed package shall be *present* or *absent*
 
-###`package_version`
+`package_version`
+To set the specific version you want to install.  Default: 6.5.4-1
 
-###`package_name`
+`package_name`
+Name of the package to install.  Default: apm-server
 
-###`package_config_path`
+`package_config_path`
+Path to the directory in which to install configuration files.  Default: <OS dependent>
 
-###`service_ensure`
+`service_ensure`
+Whether the service should be running.  Default: *running*
 
-###`service_enable`
+`service_enable`
+Whether the service should be enabled to start at boot.  Default: *true*
 
-###`service_name`
+`service_name`
+Name of service to manage.  Default: apm-server
 
-###`apmserver_config_custom`
+`apmserver_config_custom`
+Custom configuration to settings.  Default: {}

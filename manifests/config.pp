@@ -4,6 +4,7 @@
 #
 # @example
 #   include apmserver::config
+#
 class apmserver::config (
   Boolean $merge_default_config = $apmserver::merge_default_config,
   String $ensure = $apmserver::package_ensure,

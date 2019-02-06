@@ -4,6 +4,7 @@
 #
 # @example
 #   include apmserver::package
+#
 class apmserver::package (
   Boolean $manage_repo = $apmserver::manage_repo,
   String $ensure       = $apmserver::package_ensure,
