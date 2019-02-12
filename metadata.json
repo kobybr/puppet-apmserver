@@ -25,25 +25,43 @@
     {
       "operatingsystem": "CentOS",
       "operatingsystemrelease": [
+        "6",
         "7"
       ]
     },
     {
       "operatingsystem": "OracleLinux",
       "operatingsystemrelease": [
+        "6",
         "7"
       ]
     },
     {
       "operatingsystem": "RedHat",
       "operatingsystemrelease": [
+        "6",
         "7"
       ]
     },
     {
       "operatingsystem": "Scientific",
       "operatingsystemrelease": [
+        "6",
         "7"
+      ]
+    },
+    {
+       "operatingsystem": "Debian",
+       "operatingsystemrelease": [
+         "8",
+         "9"
+       ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "14.04",
+        "16.04"
       ]
     }
   ],
@@ -52,6 +70,11 @@
       "name": "puppet",
       "version_requirement": ">= 4.7.0 < 6.0.0"
     }
+  ],
+  "tags": [
+    "Elastic",
+    "apm-server",
+    "APM"
   ],
   "pdk-version": "1.6.0",
   "template-url": "file://C:/Program Files/Puppet Labs/DevelopmentKit/share/cache/pdk-templates.git",

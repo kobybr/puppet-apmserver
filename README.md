@@ -62,13 +62,13 @@ Merge config settings from the *apm-server.yml* file provided in the rpm.  Defau
 Control if the managed package shall be *present* or *absent*
 
 `package_version`
-To set the specific version you want to install.  Default: 6.5.4-1
+To set the specific version you want to install (ex. 6.5.4).  Default: latest
 
 `package_name`
 Name of the package to install.  Default: apm-server
 
 `package_config_path`
-Path to the directory in which to install configuration files.  Default: <OS dependent>
+Path to the directory in which to install configuration files.  Default: '/etc/apm-server'
 
 `service_ensure`
 Whether the service should be running.  Default: *running*
@@ -80,4 +80,4 @@ Whether the service should be enabled to start at boot.  Default: *true*
 Name of service to manage.  Default: apm-server
 
 `apmserver_config_custom`
-Custom configuration to settings.  Default: {}
+Custom configuration settings.  Default: {}

@@ -62,7 +62,7 @@
 #   Name of service to manage.  Default: apm-server
 #
 # @apmserver_config_custom
-#   Custom configuration to settings.  Default: {}
+#   Custom configuration settings.  Default: {}
 #
 class apmserver (
   Boolean $manage_repo,
@@ -76,6 +76,16 @@ class apmserver (
   Boolean $merge_default_config,
   Hash $apmserver_config_custom = {},
 ){
+
+  if $::osfamily == 'RedHat' {
+    if ($package_version =~ /.+-\d/ or $package_version in [ 'present', 'installed', 'latest', 'held' ]) {
+      $_package_version = $package_version
+    } else {
+      $_package_version = "${package_version}-1"
+    }
+  } else {
+    $_package_version = $package_version
+  }
 
   contain '::apmserver::package'
   contain '::apmserver::config'
