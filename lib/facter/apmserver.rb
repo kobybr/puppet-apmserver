@@ -1,4 +1,3 @@
-#!/usr/bin/ruby
 require 'facter'
 
 Facter.add(:pkg_versions) do
