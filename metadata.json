@@ -1,6 +1,6 @@
 {
   "name": "kobybr-apmserver",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Brad Koby",
   "summary": "Install and manage Elastic's APM server",
   "license": "GPL-3.0+",

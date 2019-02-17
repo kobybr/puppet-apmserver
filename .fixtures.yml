@@ -5,4 +5,5 @@ fixtures:
   forge_modules:
      stdlib: "puppetlabs/stdlib"
      systemd: "camptocamp/systemd"
+     apt: "puppetlabs/apt"
      elastic_stack: "elastic/elastic_stack"
