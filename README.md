@@ -81,3 +81,6 @@ Name of service to manage.  Default: apm-server
 
 `apmserver_config_custom`
 Custom configuration settings.  Default: {}
+
+`apmserver_default_config_file`
+Full path to the packages default configuration file.  Default: undef
