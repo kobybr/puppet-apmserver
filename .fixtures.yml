@@ -6,4 +6,8 @@ fixtures:
      stdlib: "puppetlabs/stdlib"
      systemd: "camptocamp/systemd"
      apt: "puppetlabs/apt"
+     yum: "puppet/yum"
      elastic_stack: "elastic/elastic_stack"
+
+symlinks:
+    apmserver: "#{source_dir}"

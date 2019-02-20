@@ -64,8 +64,12 @@
 # @apmserver_config_custom
 #   Custom configuration settings.  Default: {}
 #
+# @apmserver_default_config_file
+#   Full path to the packages default configuration file.  Default: undef
+#
 class apmserver (
   Boolean $manage_repo,
+  Boolean $merge_default_config,
   String $package_ensure,
   String $package_version,
   String $package_name,
@@ -73,8 +77,8 @@ class apmserver (
   String $service_ensure,
   String $service_enable,
   String $service_name,
-  Boolean $merge_default_config,
   Hash $apmserver_config_custom = {},
+  Optional[String] $apmserver_default_config_file = undef,
 ){
 
   if $::osfamily == 'RedHat' {
@@ -85,6 +89,11 @@ class apmserver (
     }
   } else {
     $_package_version = $package_version
+  }
+
+  $_ori_ext = $::osfamily ? {
+    'Debian' => 'dpkg-dist',
+    default  => 'rpmnew',
   }
 
   contain '::apmserver::package'
