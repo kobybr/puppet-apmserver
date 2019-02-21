@@ -44,7 +44,7 @@
 #   Control if the managed package shall be present or absent
 #
 # @package_version
-#   To set the specific version you want to install.  Default: 6.5.4-1
+#   To set the specific version you want to install.  Default: latest
 #
 # @package_name
 #   Name of the package to install.  Default: apm-server
