@@ -55,6 +55,9 @@ Module Parameters
 `manage_repo`
 Enable repo management by enabling official Elastic repositories.
 
+`repo_version`
+The version to be used with elastic_stack for setting repository version.
+
 `merge_default_config`
 Merge config settings from the *apm-server.yml* file provided in the rpm.  Default: *true*
 

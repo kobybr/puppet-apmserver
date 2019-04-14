@@ -7,6 +7,7 @@
 #
 class apmserver::package (
   Boolean $manage_repo    = $apmserver::manage_repo,
+  Integer $repo_version   = $apmserver::repo_version,
   String $package_ensure  = $apmserver::package_ensure,
   String $package_version = $apmserver::_package_version,
   String $package_name    = $apmserver::package_name,
@@ -36,7 +37,10 @@ class apmserver::package (
   }
 
   if ($manage_repo == true) {
-    contain '::elastic_stack::repo'
+    class { 'elastic_stack::repo':
+      version => $repo_version,
+    }
+
     ensure_packages( $package_name, {
       ensure          => $_ensure,
       require         => Class[elastic_stack::repo],
