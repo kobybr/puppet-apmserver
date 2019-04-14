@@ -1,8 +1,13 @@
 Changelog
 =========
 
+1.0.5 (April 13, 2019)
+----------------------
+**Bugfixes**
+  * Increment metadata version for forge deploy
+
 1.0.4 (April 13, 2019)
-------------------------
+----------------------
 **Breaking Changes**
   * If manage_repo, default elastic_repo set from version 6 to version 7
 
