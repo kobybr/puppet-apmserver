@@ -1,5 +1,6 @@
 ---
 apmserver::manage_repo: true
+apmserver::repo_version: 7
 apmserver::merge_default_config: true
 apmserver::package_version: latest
 apmserver::package_ensure: present

@@ -37,6 +37,9 @@
 # @param manage_repo
 #   Enable repo management by enabling official Elastic repositories. Default: true
 #
+# @param repo_version
+#   The version to be used with elastic_stack for setting repository version. Default: 7
+#
 # @param merge_default_config
 #   Merge config settings from the apm-server.yml file provided in the rpm.  Default: true
 #
@@ -69,6 +72,7 @@
 #
 class apmserver (
   Boolean $manage_repo,
+  Integer $repo_version,
   Boolean $merge_default_config,
   String $package_ensure,
   String $package_version,
