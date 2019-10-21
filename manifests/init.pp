@@ -69,6 +69,12 @@
 #
 # @apmserver_default_config_file
 #   Full path to the packages default configuration file.  Default: undef
+# 
+# @config_owner
+#   Parameter to set the owner of the configuration file
+# 
+# @config_group
+#   Parameter to set the group of the configuration file
 #
 class apmserver (
   Boolean $manage_repo,
@@ -83,6 +89,8 @@ class apmserver (
   String $service_name,
   Hash $apmserver_config_custom = {},
   Optional[String] $apmserver_default_config_file = undef,
+  String $config_owner,
+  String $config_group,
 ){
 
   if $::osfamily == 'RedHat' {
