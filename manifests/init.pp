@@ -89,8 +89,8 @@ class apmserver (
   String $service_name,
   Hash $apmserver_config_custom = {},
   Optional[String] $apmserver_default_config_file = undef,
-  String $config_owner,
-  String $config_group,
+  Optional[String] $config_owner = undef,
+  Optional[String] $config_group = undef,
 ){
 
   if $::osfamily == 'RedHat' {

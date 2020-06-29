@@ -9,5 +9,3 @@ apmserver::package_config_path: /etc/apm-server
 apmserver::service_ensure: running
 apmserver::service_enable: 'true'
 apmserver::service_name: apm-server
-apmserver::config_owner: root
-apmserver::config_group: root
