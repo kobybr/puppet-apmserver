@@ -11,6 +11,8 @@ class apmserver::config (
   Hash $apmserver_config_custom                   = $apmserver::apmserver_config_custom,
   String $ori_ext                                 = $apmserver::_ori_ext,
   Optional[String] $apmserver_default_config_file = $apmserver::apmserver_default_config_file,
+  String $config_owner                            = $apmserver::config_owner,
+  String $config_group                            = $apmserver::config_group,
 ){
 
   $_file_ensure = $package_ensure ? {
@@ -33,6 +35,8 @@ class apmserver::config (
     ensure  => $_file_ensure,
     content => $apmserver_config_combined,
     mode    => '0600',
+    owner   => $config_owner,
+    group   => $config_group,
   }
 
 }
