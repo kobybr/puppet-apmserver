@@ -1,6 +1,11 @@
 Changelog
 =========
 
+1.0.6 (June 29, 2020)
+----------------------
+**Features**
+  * Allow ability to set owner and group of the apm-server.yml configuratio file.
+
 1.0.5 (April 13, 2019)
 ----------------------
 **Bugfixes**

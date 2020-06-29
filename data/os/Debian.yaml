@@ -1,0 +1,3 @@
+---
+apmserver::config_owner: apm-server
+apmserver::config_group: apm-server

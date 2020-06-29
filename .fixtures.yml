@@ -3,11 +3,12 @@
 ---
 fixtures:
   forge_modules:
-     stdlib: "puppetlabs/stdlib"
-     systemd: "camptocamp/systemd"
-     apt: "puppetlabs/apt"
-     yum: "puppet/yum"
-     elastic_stack: "elastic/elastic_stack"
+    stdlib: "puppetlabs/stdlib"
+    systemd: "camptocamp/systemd"
+    apt: "puppetlabs/apt"
+    yum: "puppet/yum"
+    elastic_stack: "elastic/elastic_stack"
+    yumrepo_core: "puppetlabs/yumrepo_core"
 
 symlinks:
     apmserver: "#{source_dir}"

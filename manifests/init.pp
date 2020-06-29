@@ -87,10 +87,10 @@ class apmserver (
   String $service_ensure,
   String $service_enable,
   String $service_name,
+  String $config_owner,
+  String $config_group,
   Hash $apmserver_config_custom = {},
   Optional[String] $apmserver_default_config_file = undef,
-  Optional[String] $config_owner = undef,
-  Optional[String] $config_group = undef,
 ){
 
   if $::osfamily == 'RedHat' {
@@ -108,11 +108,11 @@ class apmserver (
     default  => 'rpmnew',
   }
 
-  contain '::apmserver::package'
-  contain '::apmserver::config'
-  contain '::apmserver::service'
+  contain 'apmserver::package'
+  contain 'apmserver::config'
+  contain 'apmserver::service'
 
-  Class['::apmserver::package']
-  -> Class['::apmserver::config']
-  -> Class['::apmserver::service']
+  Class['apmserver::package']
+  -> Class['apmserver::config']
+  -> Class['apmserver::service']
 }

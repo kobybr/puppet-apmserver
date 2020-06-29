@@ -87,3 +87,9 @@ Custom configuration settings.  Default: {}
 
 `apmserver_default_config_file`
 Full path to the packages default configuration file.  Default: undef
+
+`config_owner`
+Parameter to set the owner of the configuration file.  Default: undef
+
+`config_group`
+Parameter to set the group of the configuration file.  Default: undef
