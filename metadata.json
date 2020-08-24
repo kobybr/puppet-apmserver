@@ -1,6 +1,6 @@
 {
   "name": "kobybr-apmserver",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "author": "Brad Koby",
   "summary": "Install and manage Elastic's APM server",
   "license": "GPL-3.0+",
@@ -10,7 +10,7 @@
   "dependencies": [
     {
       "name": "puppetlabs/stdlib",
-      "version_requirement": ">= 4.13.0 < 5.0.0"
+      "version_requirement": ">= 4.13.0 < 7.0.0"
     },
     {
       "name": "camptocamp/systemd",
@@ -68,7 +68,7 @@
   "requirements": [
     {
       "name": "puppet",
-      "version_requirement": ">= 5.0.0 < 6.0.0"
+      "version_requirement": ">= 5.4.0 < 7.0.0"
     }
   ],
   "tags": [
@@ -76,7 +76,7 @@
     "apm-server",
     "APM"
   ],
-  "pdk-version": "1.18.0",
+  "pdk-version": "1.18.1",
   "template-url": "https://github.com/puppetlabs/pdk-templates#1.18.0",
   "template-ref": "tags/1.18.0-0-g095317c"
 }
