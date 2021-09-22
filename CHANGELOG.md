@@ -1,6 +1,11 @@
 Changelog
 =========
 
+1.1.2 (Sep 22, 2021)
+----------------------
+**Features**
+  * Bump maximum puppetlabs-stdlib version
+
 1.1.1 (Sep 22, 2021)
 ----------------------
 **Features**
