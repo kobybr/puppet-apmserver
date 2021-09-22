@@ -1,6 +1,11 @@
 Changelog
 =========
 
+1.1.1 (Sep 22, 2021)
+----------------------
+**Features**
+  * Use voxpupuli puppet-systemd
+
 1.0.6 (June 29, 2020)
 ----------------------
 **Features**

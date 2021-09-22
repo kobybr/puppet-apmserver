@@ -1,6 +1,6 @@
 {
   "name": "kobybr-apmserver",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "Brad Koby",
   "summary": "Install and manage Elastic's APM server",
   "license": "GPL-3.0+",
@@ -13,7 +13,7 @@
       "version_requirement": ">= 4.13.0 < 8.0.0"
     },
     {
-      "name": "camptocamp/systemd",
+      "name": "puppet/systemd",
       "version_requirement": ">= 1.1.1 < 4.0.0"
     },
     {
