@@ -7,7 +7,7 @@ fixtures:
     systemd: "camptocamp/systemd"
     apt: "puppetlabs/apt"
     yum: "puppet/yum"
-    elastic_stack: "elastic/elastic_stack"
+    elastic_stack: "puppet/elastic_stack"
     yumrepo_core: "puppetlabs/yumrepo_core"
 
 symlinks:
